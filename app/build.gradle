@@ -12,7 +12,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.bytexero.draw.bear.vv"
+        applicationId "com.bytexero.draw.bear.pp"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
@@ -53,8 +53,8 @@ android {
 //        core {}
 //        fdroid {}
 //        prepaid {}
-        vivo {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "vivo", APP_NAME: "小熊绘图"]
+        pp {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "pp", APP_NAME: "小熊绘图"]
             signingConfig signingConfigs.release
         }
         productFlavors.all {
