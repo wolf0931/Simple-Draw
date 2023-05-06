@@ -12,7 +12,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.bytexero.draw.bear.xm"
+        applicationId "com.bytexero.draw.bear.op"
         minSdkVersion 23
         targetSdkVersion 33
         versionCode 1
@@ -53,8 +53,8 @@ android {
 //        core {}
 //        fdroid {}
 //        prepaid {}
-        xiaomi {
-            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi", APP_NAME: "小熊绘图"]
+        oppo {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "oppo", APP_NAME: "小熊绘图"]
             signingConfig signingConfigs.release
         }
         productFlavors.all {
