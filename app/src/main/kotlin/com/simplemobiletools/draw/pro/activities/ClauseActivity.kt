@@ -76,6 +76,6 @@ class ClauseActivity : SimpleActivity() {
     }
 
     private fun start() {
-        webview!!.loadUrl("http://www.bytexero.com/static/zjz/xxzjz/user.html")
+        webview!!.loadUrl("http://www.bytexero.com/static/draw/xiaoxiong/user.html")
     }
 }

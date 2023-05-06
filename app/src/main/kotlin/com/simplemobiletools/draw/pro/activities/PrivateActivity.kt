@@ -65,6 +65,6 @@ class PrivateActivity : SimpleActivity() {
 
     private fun start() {
 
-        webview!!.loadUrl("http://www.bytexero.com/static/zjz/xxzjz/privacy.html")
+        webview!!.loadUrl("http://www.bytexero.com/static/draw/xiaoxiong/privacy.html")
     }
 }
