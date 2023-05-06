@@ -12,17 +12,17 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.simplemobiletools.draw.pro"
+        applicationId "com.bytexero.draw.bear.xm"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 78
-        versionName "6.9.2"
+        versionCode 1
+        versionName "1.0.1"
         setProperty("archivesBaseName", "draw")
         vectorDrawables.useSupportLibrary = true
     }
 
     signingConfigs {
-	if (keystorePropertiesFile.exists()) {
+        if (keystorePropertiesFile.exists()) {
             release {
                 keyAlias keystoreProperties['keyAlias']
                 keyPassword keystoreProperties['keyPassword']
@@ -34,22 +34,33 @@ android {
 
     buildTypes {
         debug {
-	        applicationIdSuffix ".debug"
+            applicationIdSuffix ".debug"
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            if (keystorePropertiesFile.exists()) {
-                signingConfig signingConfigs.release
+            android.applicationVariants.all { variant ->
+                variant.outputs.all { output ->
+                    def date = new Date().format("yyyyMMdd", TimeZone.getTimeZone("GMT+08"))
+                    outputFileName = "小熊绘图" + "-${variant.productFlavors[0].name}-${variant.versionName}-${date}.apk"
+                }
             }
         }
     }
 
     flavorDimensions "variants"
     productFlavors {
-        core {}
-        fdroid {}
-        prepaid {}
+//        core {}
+//        fdroid {}
+//        prepaid {}
+        xiaomi {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi", APP_NAME: "小熊绘图"]
+            signingConfig signingConfigs.release
+        }
+        productFlavors.all {
+                //遍历productFlavors多渠道，设置渠道号（xiaomi 、huawei）
+            flavor -> flavor.manifestPlaceholders.put("CHANNEL_VALUE", name)
+        }
     }
 
     sourceSets {
@@ -60,9 +71,51 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+    dexOptions {
+        incremental true
+        javaMaxHeapSize '4g'
+    }
 }
 
 dependencies {
-    implementation 'com.github.SimpleMobileTools:Simple-Commons:136962b0cd'
+//    implementation 'com.github.SimpleMobileTools:Simple-Commons:136962b0cd'
+    implementation project(':commons')
     implementation "androidx.print:print:1.0.0"
+
+    implementation 'com.airbnb.android:lottie:3.6.1'
+
+
+    //网络
+    //网络请求 + 解析
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.2.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+
+    implementation "io.reactivex.rxjava3:rxjava:3.1.5"
+    implementation "io.reactivex.rxjava3:rxandroid:3.0.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+
+    //GroMore_sdk
+    implementation files('libs/mediation_ad_sdk_3.9.0.2.aar')
+    //pangle
+    implementation files('libs/open_ad_sdk_5.1.0.2.aar')
+    //GroMore_sdk adapter
+    implementation files('libs/pangle_adapter_5.0.0.4.0.aar')
+
+    //GDT
+    implementation files('libs/gdt_adapter_4.500.1370.0.aar')
+    implementation files('libs/GDTSDK.unionNormal.4.500.1370.aar')
+
+    //baidu
+    implementation files('libs/Baidu_MobAds_SDK_v9.251.aar')
+    implementation files('libs/baiduMobAds_adapter_9.251.0.aar')
+
+
+    //sigmob
+    implementation files('libs/sigmob_adapter_4.8.2.1.aar')
+    implementation files('libs/windAd-4.8.2.aar')
+    implementation files('libs/windAd-common-1.4.0.aar')
 }

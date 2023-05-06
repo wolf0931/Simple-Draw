@@ -41,4 +41,8 @@ class Config(context: Context) : BaseConfig(context) {
     var forcePortraitMode: Boolean
         get() = prefs.getBoolean(FORCE_PORTRAIT_MODE, false)
         set(forcePortraitMode) = prefs.edit().putBoolean(FORCE_PORTRAIT_MODE, forcePortraitMode).apply()
+
+    var ad: Boolean
+        get() = prefs.getBoolean(AD, false)
+        set(forcePortraitMode) = prefs.edit().putBoolean(AD, forcePortraitMode).apply()
 }

@@ -1,5 +1,6 @@
 package com.simplemobiletools.draw.pro.activities
 
+import android.content.Intent
 import android.os.Bundle
 import com.simplemobiletools.commons.extensions.beVisibleIf
 import com.simplemobiletools.commons.extensions.getProperPrimaryColor
@@ -25,17 +26,24 @@ class SettingsActivity : SimpleActivity() {
         super.onResume()
         setupToolbar(settings_toolbar, NavigationIcon.Arrow)
 
-        setupCustomizeColors()
+//        setupCustomizeColors()
         setupUseEnglish()
         setupLanguage()
         setupPreventPhoneFromSleeping()
         setupBrushSize()
         setupAllowZoomingCanvas()
         setupForcePortraitMode()
+
         updateTextColors(settings_holder)
 
         arrayOf(settings_color_customization_section_label, settings_general_settings_label).forEach {
             it.setTextColor(getProperPrimaryColor())
+        }
+        settings_user_customization_holder.setOnClickListener {
+            startActivity(Intent(this, ClauseActivity::class.java))
+        }
+        settings_privacy_customization_holder.setOnClickListener {
+            startActivity(Intent(this, PrivateActivity::class.java))
         }
     }
 
@@ -59,7 +67,7 @@ class SettingsActivity : SimpleActivity() {
         settings_language.text = Locale.getDefault().displayLanguage
         settings_language_holder.beVisibleIf(isTiramisuPlus())
         settings_language_holder.setOnClickListener {
-            launchChangeAppLanguageIntent()
+//            launchChangeAppLanguageIntent()
         }
     }
 

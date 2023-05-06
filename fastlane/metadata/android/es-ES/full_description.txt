@@ -51,7 +51,7 @@ Viene con material design y tema oscuro por defecto, proporciona una gran experi
 No contiene anuncios ni permisos innecesarios. Es totalmente opensource, proporciona colores personalizables.
 
 Consulta el conjunto completo de Simple Tools:
-https://www.simplemobiletools.com
+https://www.bytexero.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="demo_draw_btn_back">#D33F57</color>
+    <color name="black">#000000</color>
+    <color name="base_black">#323232</color>
+    <color name="bt_color">#2743F3</color>
+    <color name="white">#FFFFFF</color>
+    <color name="viewBackground">@color/white</color>
+    <color name="app_theme">#ff333333</color>
+    <color name="transparent">#00000000</color>
+</resources>

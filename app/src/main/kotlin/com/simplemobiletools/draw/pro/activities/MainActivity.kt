@@ -72,7 +72,7 @@ class MainActivity : SimpleActivity(), CanvasListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        appLaunched(BuildConfig.APPLICATION_ID)
+//        appLaunched(BuildConfig.APPLICATION_ID)
         setupOptionsMenu()
         refreshMenuItems()
 
@@ -131,9 +131,9 @@ class MainActivity : SimpleActivity(), CanvasListener {
             checkWhatsNewDialog()
         }
 
-        if (isPackageInstalled("com.simplemobiletools.draw")) {
-            ConfirmationDialog(this, "", R.string.upgraded_to_pro, R.string.ok, 0, false) {}
-        }
+//        if (isPackageInstalled("com.simplemobiletools.draw")) {
+//            ConfirmationDialog(this, "", R.string.upgraded_to_pro, R.string.ok, 0, false) {}
+//        }
     }
 
     override fun onResume() {
@@ -178,7 +178,7 @@ class MainActivity : SimpleActivity(), CanvasListener {
             findItem(R.id.menu_save).isVisible = !isImageCaptureIntent && !isEditIntent
             findItem(R.id.menu_share).isVisible = !isImageCaptureIntent && !isEditIntent
             findItem(R.id.open_file).isVisible = !isEditIntent
-            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
+//            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
         }
     }
 
@@ -192,9 +192,9 @@ class MainActivity : SimpleActivity(), CanvasListener {
                 R.id.open_file -> tryOpenFile()
                 R.id.change_background -> changeBackgroundClicked()
                 R.id.menu_print -> printImage()
-                R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
+//                R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                 R.id.settings -> launchSettings()
-                R.id.about -> launchAbout()
+//                R.id.about -> launchAbout()
                 else -> return@setOnMenuItemClickListener false
             }
             return@setOnMenuItemClickListener true
@@ -707,7 +707,7 @@ class MainActivity : SimpleActivity(), CanvasListener {
             add(Release(18, R.string.release_18))
             add(Release(20, R.string.release_20))
             add(Release(38, R.string.release_38))
-            checkWhatsNew(this, BuildConfig.VERSION_CODE)
+//            checkWhatsNew(this, BuildConfig.VERSION_CODE)
         }
     }
 }

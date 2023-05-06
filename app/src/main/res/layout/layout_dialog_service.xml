@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:text="用户隐私政策协议"
+                    android:textColor="#ff111111"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/splash_policy_declare_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="8dp"
+                    android:lineSpacingExtra="8dp"
+                    android:singleLine="false"
+                    android:text="
+本应用尊重并保护所有用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本应用会按照隐私政策的规定使用和披露您的个人信息。可阅读服务协议和隐私政策。"
+                    android:textColor="@color/base_black"
+                    android:textSize="12sp" />
+                <!--                点击“同意并继续”代表您已阅读并理解《用户协议》和《隐私政策》。本应用在使用过程中需要连接网络，并可能会进行以下权限收集：-->
+                <!--                \n    (1) 为了给您提供录屏、录音、摄像，我们可能会向您申请摄像头权限、手机存储权限等;-->
+                <!--                \n    (2) 为了给您提供快捷操作，我们可能会向您申请在其他应用之上显示内容权限;-->
+                <!--                \n    (3) 为了账号安全，我们会向您申请系统设备权限收集设备信息、日志信息;-->
+                <!--                \n    (4) 如您使用注册等服务，需要您通过绑定手机号完成实名密码登录认证;-->
+                <!--                \n    (5) 为实现识别用户渠道，参加相关活动、综合统计分析等目的所必须,我们可能会调用剪切板并使用与功能邀请注册相关的最小必要信息(口令、链接、统计参数等) ;-->
+                <!--                \n    (6) 我们会努力采取各种安全技术保护您的个人信息。未经您同意，我们不会从第三方获取、共享或对外提供你的信息。-->
+                <!--                \n    (7) 您还可以访问、更正、删除您的个人信息，我们为您提供了注销、投诉等多种不同方式。-->
+                <!--                \n    (8) 为了app的实时更新和检测，我们会向您申请获取用户的软件安装列表MAC地址。-->
+
+
+                <TextView
+                    android:id="@+id/tvExplain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="6dp"
+                    android:text=""
+                    android:textColor="#ff333333"
+                    android:textSize="11sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/check_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/splash_policy_btn"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <!--        <androidx.appcompat.widget.AppCompatCheckBox-->
+        <!--            android:id="@+id/checkBox"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            android:checked="false"-->
+        <!--            android:gravity="center"-->
+        <!--            android:text="我已阅读并同意"-->
+        <!--            android:textSize="13sp"-->
+        <!--            android:theme="@style/MyCheckBox" />-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="点击查看完整版"
+            android:textColor="@color/base_black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="《用户协议》"
+            android:textColor="@color/bt_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="与"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="《隐私政策》"
+            android:textColor="@color/bt_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/shap_radius15_8f9bfe"
+        android:gravity="center"
+        android:text="同意"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCancel"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shap_radius15_stoke_8f9bfe"
+        android:gravity="center"
+        android:text="拒绝"
+        android:textColor="@color/bt_color"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

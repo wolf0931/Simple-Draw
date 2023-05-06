@@ -51,7 +51,7 @@ Ve výchozím nastavení přichází s designem Material a tmavým tématem, kte
 Neobsahuje žádné reklamy ani zbytečná oprávnění. Je plně open-source a poskytuje přizpůsobitelné barvy.
 
 Kompletní sadu jednoduchých nástrojů si můžete prohlédnout zde:
-https://www.simplemobiletools.com.
+https://www.bytexero.com.
 
 Facebook:
 https://www.facebook.com/simplemobiletools

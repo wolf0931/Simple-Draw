@@ -51,7 +51,7 @@ Det kommer med materialdesign och mörkt tema som standard, ger bra användarupp
 Innehåller inga annonser eller onödiga behörigheter. Den är helt öppen källkod, ger anpassningsbara färger.
 
 Kolla in hela sviten av Simple Tools här:
-https://www.simplemobiletools.com
+https://www.bytexero.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools

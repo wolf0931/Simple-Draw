@@ -51,7 +51,7 @@ De manera predeterminada, inclou el «material design» i un tema fosc, proporci
 No conté anuncis ni permisos innecessaris. El codi font és totalment obert, proporciona colors personalitzables.
 
 Consulteu el conjunt complet d'eines simples aquí:
-https://www.simplemobiletools.com
+https://www.bytexero.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools

@@ -51,7 +51,7 @@ Malzeme tasarımı ve varsayılan olarak koyu renkli temasıyla birlikte, kolay 
 Reklam veya gereksiz izinler içermez. Tamamen açık kaynaktır ve özelleştirilebilir renkler sunar.
 
 Basit Araçlar paketinin tamamına buradan göz atın:
-https://www.simplemobiletools.com
+https://www.bytexero.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools

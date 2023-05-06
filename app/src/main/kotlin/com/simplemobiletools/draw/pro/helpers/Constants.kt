@@ -9,6 +9,8 @@ const val LAST_SAVE_EXTENSION = "last_save_extension"
 const val ALLOW_ZOOMING_CANVAS = "allow_zooming_canvas"
 const val FORCE_PORTRAIT_MODE = "force_portrait_mode"
 
+const val AD = "ad"
+
 const val PNG = "png"
 const val SVG = "svg"
 const val JPG = "jpg"

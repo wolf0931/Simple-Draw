@@ -51,7 +51,7 @@ Mukana material design ja tumma teema oletusarvoisesti, joka tarjoaa loistavan k
 Ei sisällä mainoksia tai tarpeettomia käyttöoikeuksia. Se on täysin avoimen lähdekoodin, tarjoaa muokattavia värejä.
 
 Katso koko paketti yksinkertaisia työkaluja täältä:
-https://www.simplemobiletools.com
+https://www.bytexero.com
 
 Facebook:
 https://www.facebook.com/simplemobiletools
